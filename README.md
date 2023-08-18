@@ -28,6 +28,10 @@ pip install audiapi
 ## List all vehicles under your account
 The auth tokens will be cached in the working directory
 ```python
+import json
+from audiapi.API import API
+from audiapi.Services import LogonService, CarService
+
 api = API()
 logon_service = LogonService(api)
 if not logon_service.restore_token():
